@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>learn D3</title>
+        <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <svg></svg>
+    </body>
+        <script>
+                var svgheight = 680;
+                var svgwidth =680;
+
+                var svg = d3.selectAll("svg")    
+                            .attr("height",svgheight)
+                            .attr("width",svgwidth)
+                            .attr("style","border: black solid;")
+                            ;
+
+                            svg.append("rect")
+                                .attr("x",0)
+                                .attr("y",0)
+                                .attr("height",680)
+                                .attr("width",680)
+                                .attr("fill","lightcyan")
+                                .attr("class","sky");
+
+                            svg.append("circle")
+                                .attr("cx",340)
+                                .attr("cy",340)
+                                .attr("r",160)
+                                .attr("fill","red")
+                                .attr("class","firstc");;
+                                
+                            svg.append("circle")
+                                .attr("cx",340)
+                                .attr("cy",340)
+                                .attr("r",150)
+                                .attr("fill","orangered")
+                                .attr("class","secondc");;
+
+                            svg.append("circle")
+                                .attr("cx",340)
+                                .attr("cy",340)
+                                .attr("r",130)
+                                .attr("fill","darkorange")
+                                .attr("class","thirdc");;
+
+                            svg.append("circle")
+                                .attr("cx",340)
+                                .attr("cy",340)
+                                .attr("r",110)
+                                .attr("fill","orange")
+                                .attr("class","fourthc");;
+
+                            svg.append("circle")
+                                .attr("cx",340)
+                                .attr("cy",340)
+                                .attr("r",90)
+                                .attr("fill","gold")
+                                .attr("class","fifthc");;
+
+                            svg.append("circle")
+                                .attr("cx",340)
+                                .attr("cy",340)
+                                .attr("r",70)
+                                .attr("fill","yellow")
+                                .attr("class","sixthc");
+
+                            svg.append("rect")
+                                .attr("x",0)
+                                .attr("y",340)
+                                .attr("height",340)
+                                .attr("width",680)
+                                .attr("fill","saddlebrown")
+                                .attr("stroke","black");
+
+                            svg.append("rect")
+                                .attr("x",0)
+                                .attr("y",347)
+                                .attr("height",340)
+                                .attr("width",680)
+                                .attr("fill","lightblue")
+                                .attr("class","firstw");
+
+                            svg.append("rect")
+                                .attr("x",0)
+                                .attr("y",353)
+                                .attr("height",340)
+                                .attr("width",680)
+                                .attr("fill","darkturquoise")
+                                .attr("class","secondw");;
+
+                            svg.append("rect")
+                                .attr("x",0)
+                                .attr("y",355)
+                                .attr("height",340)
+                                .attr("width",680)
+                                .attr("fill","deepskyblue")
+                                .attr("class","thirdw");;
+
+                            svg.append("rect")
+                                .attr("x",0)
+                                .attr("y",370)
+                                .attr("height",340)
+                                .attr("width",680)
+                                .attr("fill","blue")
+                                .attr("class","fourthw");;
+
+                            svg.append("rect")
+                                .attr("x",0)
+                                .attr("y",400)
+                                .attr("height",340)
+                                .attr("width",680)
+                                .attr("fill","mediumblue")
+                                .attr("class","fifthw");;
+                                ;
+
+                            svg.append("rect")
+                                .attr("x",0)
+                                .attr("y",470)
+                                .attr("height",340)
+                                .attr("width",680)
+                                .attr("fill","darkblue")
+                                .attr("class","sixthw");;
+                                ;
+
+                            svg.append("path")
+                                .attr("d", "M0 340 30 320 50 300 80 240 150 230 180 290 200 320 230 330 240 340") 
+                                .style("fill", "peru")
+                                .style("stroke", "black")
+                                .attr("stroke-width",1)
+
+                            svg.append("path")
+                                .attr("d", "M400 340 420 330 430 280 590 200 620 250 650 340") 
+                                .style("fill", "peru")
+                                .style("stroke", "black")
+                                .attr("stroke-width",1)
+                            
+
+                
+        </script>
+
+<style>
+    .sixthc,.fifthc,.fourthc,.thirdc,.secondc,.firstc
+    {        
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: sixthc 5s infinite;
+    }
+    @keyframes sixthc
+     {
+        0%
+        {
+            transform: scaleX(1);
+            transform: scaleY(1);
+        }
+        50%
+        {
+            transform: scaleX(2);
+            transform: scaleY(2);
+            
+        }
+        100%
+        {
+            transform: scaleX(1);
+            transform: scaleY(1);
+        }
+    }
+
+    .sky
+    {        
+        animation: sky 5s infinite;
+    }
+
+    @keyframes sky 
+    {
+
+        0% {
+            fill:#E0FFFF 
+        }
+
+        50% {
+            fill:#000
+        }
+
+        100% {
+            fill: #E0FFFF 
+        }
+    }
+    .sixthw,.fifthw,.fourthw,.thirdw,.secondw,.firstw
+    {
+        animation: waves 3s infinite;
+    }
+    @keyframes waves 
+    {
+
+        0% {
+            transform: translateY(0%);
+        
+        }
+
+        25% {
+            transform: translateY(3%);
+        }
+
+        50% {
+            transform: translateY(0%);
+        }
+
+        75% {
+            transform: translateY(2%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+    
+</style>
+</html>

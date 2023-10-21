@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>learn D3</title>
+        <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <svg></svg>
+    </body>
+        <script>
+                var svgheight = 680;
+                var svgwidth =680;
+
+                var svg = d3.selectAll("svg")    
+                            .attr("height",svgheight)
+                            .attr("width",svgwidth)
+                            .attr("style","border: black solid;");
+
+                            svg.append("path")
+                                .attr("d", "M195 180 L480 180 L480 550 A50 50 0 0 1 450 600 L220 600 A50 50 0 0 1 195 550 Z") 
+                                .style("fill", "none")
+                                .style("stroke", "black")
+                                .attr("stroke-width",10);
+
+                            svg.append("path")
+                                .attr("d", "M200 300 H480") 
+                                .style("fill", "none")
+                                .style("stroke", "black")
+                                .attr("stroke-width",5);
+
+                        for(let x=310;x<380;)
+                        {   var val=5
+                            for(let y=100;y<350;)
+                            {
+                                
+                                svg.append("circle")
+                                    .attr("cx",x) 
+                                    .attr("cy",y) 
+                                    .attr("r",val) 
+                                    .attr("fill","black");
+                                    y=y+20
+                                    val=val-0.1
+                            }
+                            x=x+20
+                        }
+                        svg.append("circle")
+                                    .attr("cx",330) 
+                                    .attr("cy",360) 
+                                    .attr("r",3) 
+                                    .attr("fill","black");
+                        svg.append("circle")
+                                    .attr("cx",350) 
+                                    .attr("cy",360) 
+                                    .attr("r",3) 
+                                    .attr("fill","black");
+                        svg.append("circle")
+                                    .attr("cx",350) 
+                                    .attr("cy",380) 
+                                    .attr("r",3) 
+                                    .attr("fill","black");
+                            
+
+                
+        </script>
+
+  
+        
+</html>
